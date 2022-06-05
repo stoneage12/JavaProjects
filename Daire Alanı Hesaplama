@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class daireAlani {
+
+    public static void main(String[] args) {
+
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Dairenin yari capini giriniz :");
+        int r = input.nextInt();
+        System.out.println("Merkez acisi olcusu giriniz :");
+        int m = input.nextInt();
+
+        double pi =3.14;
+        double alan =r*r*pi;
+        double cevre =2*r*pi;
+
+        double daire_dilimi_alani =(pi * (r*r) * m) / 360;
+
+
+
+        System.out.println("Dairenin Alani :"+alan +"  Dairenin Cevresi :"+cevre);
+        System.out.println("Daire diliminin alani : " + daire_dilimi_alani);
+
+
+    }
+}
