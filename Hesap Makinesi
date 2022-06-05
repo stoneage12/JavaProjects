@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class hesapMakinesi {
 
     public static void main(String[] args) {
-        
+
 
         Scanner input = new Scanner(System.in);
         System.out.println("Birinci sayiyi Giriniz :");
@@ -30,17 +30,20 @@ public class hesapMakinesi {
         }
         switch (islem) {
             case 1:
-                System.out.println(sayi1 + sayi2);
+                System.out.println("İslemin Sonucu :"+(sayi1 + sayi2));
                 break;
             case 2:
-                System.out.println(sayi1 - sayi2);
+                System.out.println("İslemin Sonucu :"+(sayi1 - sayi2));
                 break;
             case 3:
-                System.out.println(sayi1 * sayi2);
+                System.out.println("İslemin Sonucu :"+(sayi1 * sayi2));
                 break;
             case 4:
-                System.out.println(sayi1 / sayi2);
+                System.out.println(("İslemin Sonucu :"+sayi1 / sayi2));
                 break;
+
+
         }
     }
 }
+
