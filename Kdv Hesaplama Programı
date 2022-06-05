@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class kdvHesaplama {
+
+    public static void main(String[] args) {
+
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Bir tutar giriniz");
+        int fiyat = input.nextInt();
+
+        float kdvli_fiyat = (float) (fiyat*1.18);
+        float kdvli_fiyat2 = (float) (fiyat*1.08);
+
+        boolean kosul = (fiyat<1000&&fiyat>0);
+        System.out.println(kosul ? "Girilen tutarin KDV dahil fiyati :"+kdvli_fiyat :"Girilen tutarın KDV dahil fiyati  :"+ kdvli_fiyat2);
+
+    }
+}
