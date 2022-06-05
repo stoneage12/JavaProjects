@@ -1,0 +1,46 @@
+import javax.xml.datatype.DatatypeFactory;
+import java.util.Scanner;
+
+public class hesapMakinesi {
+
+    public static void main(String[] args) {
+        
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Birinci sayiyi Giriniz :");
+        int sayi1 = input.nextInt();
+        System.out.println("ikinci sayiyi Giriniz :");
+        int sayi2 = input.nextInt();
+
+        System.out.println("islem seciniz \n1-Toplama sşlemi\n2-cıkarma İslemi\n3-Carpma islemi\n4-Bolme İsleme ");
+        int islem = input.nextInt();
+
+        int a = 0;
+        while (islem != 4 && islem != 3 && islem != 2 && islem != 2 && islem != 1) {
+
+            System.out.println("islem hatali");
+            System.out.println("Tekrar islem seciniz \n1-Toplama islemi\n2-cıkarma İslemi\n3-Carpma islemi\n4-Bolme İsleme ");
+            a = input.nextInt();
+            System.out.println("islem hatali");
+            System.out.println("Tekrar islem seciniz \n1-Toplama islemi\n2-cıkarma İslemi\n3-Carpma islemi\n4-Bolme İsleme ");
+            a = input.nextInt();
+            System.out.println("1'den fazla hatalı giriş yaptınız! Sistem kapandı");
+            a = input.nextInt();
+            break;
+        }
+        switch (islem) {
+            case 1:
+                System.out.println(sayi1 + sayi2);
+                break;
+            case 2:
+                System.out.println(sayi1 - sayi2);
+                break;
+            case 3:
+                System.out.println(sayi1 * sayi2);
+                break;
+            case 4:
+                System.out.println(sayi1 / sayi2);
+                break;
+        }
+    }
+}
