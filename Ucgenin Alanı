@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class ucgenAlan {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("1. Kenari giriniz");
+        int kenar1 = input.nextInt();
+
+        System.out.println("2. Kenari giriniz");
+        int kenar2 = input.nextInt();
+        System.out.println("3. Kenari giriniz");
+        int kenar3 = input.nextInt();
+
+        double u =(double) (kenar1+kenar2+kenar3)/2;
+
+        double alan = (double) (u*(u-kenar1)*(u-kenar2)*(u-kenar3));
+        double sonuc = Math.sqrt(alan);
+        System.out.println("Ucgenin Alani :"+sonuc);
+
+
+    }
+}
