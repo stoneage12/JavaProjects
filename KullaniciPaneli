@@ -1,0 +1,57 @@
+import java.util.Scanner;
+public class kullaniciPaneli {
+
+    public static void main(String[] args) {
+
+        String id="ferdi";
+        String pass="7h52gelx3";
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Kullanıcı adınızı giriniz :");
+        String userName = input.nextLine();
+       while ( !(userName.equals(id)) ){
+
+           System.out.println("kullanıcı adınız yanlıs");
+           String a = input.nextLine();
+           if (a.equals(id)){
+               break;
+           }
+       }
+        System.out.println("Sifrenizi giriniz :");
+        String password = input.nextLine();
+        String b ="";
+       while ( !(password.equals(pass)) ){
+
+            System.out.println("Sifreniz yanlıs");
+             b = input.nextLine();
+           System.out.println("Sifreniz yanlıs");
+            b = input.nextLine();
+           System.out.println("Fazla hatalı giris");
+            if (b.equals(pass)){
+                break;
+            }
+            break;
+        }
+
+        System.out.println("Sifrenizi sıfırlamak istiyor musunz?");
+        System.out.println("evet/hayir");
+        String c = input.nextLine();
+
+        if (c.equals("evet")){
+            System.out.println("Yeni Sifrenizi oluşturun");
+            String k = input.nextLine();
+
+            if (k.equals(pass)){
+                System.out.println("Sifre oluşturulamadı, lütfen başka şifre giriniz.");
+                String j = input.nextLine();
+
+            } else if (!(k.equals(pass))) {
+                System.out.println("Şifre oluşturuldu");
+            }
+        }
+        else {
+            System.out.println("programdan Çıkılıyor..");
+        }
+
+        }
+        }
