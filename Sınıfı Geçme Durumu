@@ -1,0 +1,70 @@
+import java.util.Scanner;
+public class sinifGecmeDurumu {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Matematik notunuzu giriniz");
+        int mat = input.nextInt();
+        while(mat<1 ||  mat>99 )
+        {
+            System.out.println("0 ile 100 arası bir not giriniz");
+            mat =input.nextInt();
+        }
+
+
+        System.out.println("Fizik notunuzu giriniz");
+        int fizik = input.nextInt();
+        while(fizik<1 ||  fizik>99 )
+        {
+            System.out.println("0 ile 100 arası bir not giriniz");
+            fizik =input.nextInt();
+        }
+
+
+        System.out.println("Kimya notunuzu giriniz");
+        int kimya = input.nextInt();
+        while(kimya<1 ||  kimya>99 )
+        {
+            System.out.println("0 ile 100 arası bir not giriniz");
+            kimya =input.nextInt();
+        }
+
+
+        System.out.println("Turkce notunuzu giriniz");
+        int turkce = input.nextInt();
+        while(turkce<1 ||  turkce>99 )
+        {
+            System.out.println("0 ile 100 arası bir not giriniz");
+            turkce =input.nextInt();
+        }
+
+
+        System.out.println("Tarih notunuzu giriniz");
+        int tarih = input.nextInt();
+        while(tarih<1 ||  tarih>99 )
+        {
+            System.out.println("0 ile 100 arası bir not giriniz");
+            tarih =input.nextInt();
+        }
+
+
+        System.out.println("Muzik notunuzu giriniz");
+        int muzik = input.nextInt();
+        while(muzik<1 ||  muzik>99 )
+        {
+            System.out.println("0 ile 100 arası bir not giriniz");
+            muzik =input.nextInt();
+        }
+        int ortalama=(mat+fizik+kimya+turkce+tarih+muzik)/6;
+
+        if (ortalama>55){
+            System.out.println("ortalamanız :"+ortalama +" sınıfı geçtiniz");
+        }
+        else {
+            System.out.println("ortalamanız :"+ortalama+" Sınıfta kaldınız");
+        }
+
+
+    }
+}
