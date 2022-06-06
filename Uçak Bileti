@@ -1,0 +1,88 @@
+
+import java.util.Scanner;
+
+public class ucakBileti {
+    public static void main(String[] args) {
+        int km, yas;
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Mesafeyi km türünden giriniz :");
+        km = input.nextInt();
+
+        while (km < 0) {
+            System.out.println("hatalı giris!! Tekrar giriniz");
+            km = input.nextInt();
+
+        }
+        System.out.println("Yaşınızı giriniz : :");
+        yas = input.nextInt();
+        while (yas < 0) {
+            System.out.println("hatalı giris!! Tekrar giriniz");
+            yas = input.nextInt();
+        }
+
+        System.out.println("Yolculuk tipini giriniz (1 => Tek Yön , 2 => Gidiş Dönüş ):");
+        int y_tipi = input.nextInt();
+
+        while (y_tipi == 1 && y_tipi == 2) {
+
+            System.out.println("hatalı giris!! Tekrar giriniz");
+            y_tipi = input.nextInt();
+        }
+        double tutar = km * 0.10;
+
+        if (yas < 12 ) {
+            if (y_tipi == 2) {
+                double tutar1 = (tutar - (tutar * 0.5));
+                double tutar2 = tutar1 - (tutar1 * 0.2);
+                System.out.println("Toplam Tutar =" + (tutar2*2) + "TL");
+            } else {
+                double tutar3 = (tutar - (tutar * 0.5));
+                System.out.println("Toplam Tutar =" + tutar3 + "TL");
+            }
+        }
+
+
+        if (yas >=12&& yas<=24){
+            if (y_tipi == 2){
+                double tutar4 =  (tutar-(tutar*0.1));
+                double  tutar5 = tutar4-(tutar4*0.2);
+                System.out.println("Toplam Tutar ="+(tutar5*2)+"TL");
+            }
+            else {
+                double  tutar6= (tutar-(tutar*0.1));
+                System.out.println("Toplam Tutar ="+tutar6+"TL");
+
+            }
+        }
+
+        if (yas>24&&yas <65){
+            if (y_tipi == 2){
+
+                double  tutar10 = tutar-(tutar*0.2);
+                System.out.println("Toplam Tutar ="+(tutar10*2)+"TL");
+            }
+            else 
+         {
+
+                System.out.println("Toplam Tutar ="+tutar+"TL");
+
+        }
+        }
+
+
+        if (yas >=65){
+            if (y_tipi == 2){
+                double tutar7 =  (tutar-(tutar*0.3));
+                double  tutar8 = tutar7-(tutar7*0.2);
+                System.out.println("Toplam Tutar ="+(tutar8*2)+"TL");
+            }
+            else {
+                double  tutar9= (tutar-(tutar*0.3));
+                System.out.println("Toplam Tutar ="+tutar9+"TL");
+        }
+        }
+
+        }
+
+        }
