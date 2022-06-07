@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class faktoriyel {
+    public static void main(String[] args) {
+
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("N degerini giriniz");
+        int sayi = input.nextInt();
+        System.out.println("r değerini giriniz");
+        int sayi2 = input.nextInt();
+
+        while (sayi<sayi2)
+        {
+            System.out.println("Lütfen eleman sayısından (n) küçük bir seçim sayısı (r) giriniz.");
+            System.out.println("N degerini giriniz");
+            sayi = input.nextInt();
+            System.out.println("r değerini giriniz");
+            sayi2 = input.nextInt();
+
+        }
+        int sonuc =1;
+        int sonuc2 =1;
+        int sonuc3 =sayi-sayi2;
+        int sonuc4=1;
+
+
+        for (int i = 1; i <=sayi; i++) {
+
+            sonuc *=i;
+        }
+
+        for (int i = 1; i <=sayi2; i++) {
+
+            sonuc2 *=i;
+        }
+
+        for (int i = 1; i <=sonuc3; i++) {
+            sonuc4 *=i;
+        }
+
+        int combination = sonuc / (sonuc2 * sonuc4);
+        System.out.println("C("+sayi+","+sayi2+") ="+combination);
+    }
+}
+
