@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class usluSayilar {
+    public static void main(String[] args) {
+
+
+        Scanner input = new Scanner(System.in);
+        System.out.println(" üssü alınacak sayı :");
+        int sayi = input.nextInt();
+        System.out.println("üs olacak sayı :");
+        int sayi2 = input.nextInt();
+
+       int total =1;
+        for (int i = 1; i <=sayi2; i++) {
+
+            total *= sayi;
+
+        }
+        System.out.println("Sonuc : "+total);
+    }
+}
