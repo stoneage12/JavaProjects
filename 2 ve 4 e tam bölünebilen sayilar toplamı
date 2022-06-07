@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class girisKontrolu {
+
+    public static void main(String[] args) {
+        int toplam = 0;
+        int sayac=0;
+        Scanner input = new Scanner(System.in);
+        System.out.println("bir sayi giriniz");
+        int sayi = input.nextInt();
+
+
+        while (sayi%2==1||sayi<0||sayi<4){
+            System.out.println("Hatalı giriş! Negatif sayi,tek sayi veya 2sayısını girdiniz(2 sayisi 4 bölünmüyr) \nTekrar bir sayi giriniz ");
+            sayi = input.nextInt();
+
+        }
+
+        for (int i = 1; i <=sayi; i++) {
+            if (i%2==0&&i%4==0)
+            {
+                    toplam +=i;
+                    sayac++;
+                    System.out.println("2 ve 4 tam bölünen sayılar :"+i);
+            }
+        }
+
+        System.out.println("çift ve 4'ün katları olan sayıları toplamı :"+toplam);
+    }
+}
